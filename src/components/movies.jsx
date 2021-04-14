@@ -59,7 +59,7 @@ class Movies extends Component {
                         <td>{movie.numberInStock}</td>
                         <td>{movie.dailyRentalRate}</td>
                         <td>
-                           <Like liked={movie.liked} onClick={() => this.handleLike(movie)} />
+                        <Like liked={movie.liked} onClick={() => this.handleLike(movie)} />
                         </td>
                         <td><button onClick={ () => this.handleDelete(movie)} className="btn btn-danger btn-sm">Delete</button></td>
                         </tr>
@@ -68,13 +68,12 @@ class Movies extends Component {
                 </tbody>
             </table>
             <Pagination 
-            itemsCount={count} 
+            itemsCount={ count } 
             pageSize={ pageSize }
             currentPage={ currentPage }
-            onPageChange={this.handlePageChange}
-             />
+            onPageChange={this.handlePageChange}/>
         </React.Fragment>)
     }
 }
- 
+
 export default Movies;
